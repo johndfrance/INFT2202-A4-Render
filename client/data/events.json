@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Community Picnic in the Park",
+    "date": "2024-08-10",
+    "time": "12:00 PM",
+    "location": "Central Park",
+    "description": "Join us for a fun-filled day at Central Park! There will be games, food, and music for the whole family.",
+    "imageUrl": "./assets/images/picnic.jpg"
+  },
+  {
+    "title": "Arts and Crafts Workshop",
+    "date": "2024-09-15",
+    "time": "2:00 PM",
+    "location": "Community Center",
+    "description": "Get creative at our arts and crafts workshop! Learn new techniques and make your own unique creations.",
+    "imageUrl": "./assets/images/artscrafts.jpg"
+  },
+  {
+    "title": "Fitness Bootcamp",
+    "date": "2024-10-20",
+    "time": "9:00 AM",
+    "location": "Community Center Gym",
+    "description": "Join us for an intense fitness bootcamp session! Get your heart pumping and build strength and endurance.",
+    "imageUrl": "./assets/images/bootcamp.jpg"
+  },
+  {
+    "title": "Community Cleanup Day",
+    "date": "2024-11-05",
+    "time": "10:00 AM",
+    "location": "Various Locations",
+    "description": "Let's come together to beautify our community! Join us for a day of cleaning up parks, streets, and public spaces.",
+    "imageUrl": "./assets/images/cleanup.jpg"
+  },
+  {
+    "title": "Cooking Class: Italian Cuisine",
+    "date": "2024-12-08",
+    "time": "6:00 PM",
+    "location": "Community Center Kitchen",
+    "description": "Learn the secrets of Italian cooking from our expert chefs! Prepare and enjoy delicious Italian dishes.",
+    "imageUrl": "./assets/images/cookin.jpeg"
+  }
+]

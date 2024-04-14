@@ -1,0 +1,20 @@
+
+<div class="team-grid">
+    <div class="team-member" onclick="openTeamModal('John', 'Lead Developer', './images/doe.jpg', 'John is responsible for leading the development team.')">
+        <img src="/assets/images/doe.jpg" alt="John">
+        <h3>John Doe</h3>
+        <p>Lead Developer</p>
+    </div>
+
+
+</div>
+
+<div id="modal" class="modal">
+    <span class="close" onclick="closeTeamModal()">&times;</span>
+    <img id="modal-image" alt="Team Member">
+    <div id="modal-content" class="modal-content">
+        <h2 id="modal-name"></h2>
+        <p id="modal-role"></p>
+        <p id="modal-description"></p>
+    </div>
+</div>

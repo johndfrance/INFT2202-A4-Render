@@ -1,0 +1,67 @@
+<!--
+<div class="container">
+    <h2>Create New Post</h2>
+    <form id="postForm">
+        <label for="postTitle">Title:</label><br>
+        <input type="text" id="postTitle" name="postTitle" required><br>
+        <label for="postContent">Content:</label><br>
+        <textarea id="postContent" name="postContent" rows="4" required></textarea><br>
+        <button type="submit">Create Post</button>
+    </form>
+</div>
+<div id="postContainer"></div>
+-->
+
+<h1 class="display-3">Event Planning</h1>
+<p>Post your ideas for events here, and comment on ideas from other users!</p>
+<div class="container">
+
+ <div class="justify-content-center col-md-8">
+    <form method="post" id="messageBoard" class="mt-3 mb-5" novalidate>
+        <div class="form-group">
+            <label for="content">Post Content:</label>
+            <textarea class="form-control" id="content" name="content" rows="3" required></textarea>
+        </div>
+        <input type="hidden" id="username" name="username" value="<%=displayName%>">
+        <button type="submit" class="btn btn-primary">Post</button>
+    </form>
+ </div>
+<% posts.forEach(post => { %>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong><%= post.username %></strong> posted:</h5>
+                        <p class="card-text"><%= post.content %></p>
+                        <% if(displayName == post.username) { %>
+                        <a href="/delete/<%=post._id%>" class="btn btn-danger btn-sm delete"><i class="fas fa-trash-alt fa-sm"></i></a>
+                        <% } %>
+                        <p class="card-text"><small class="text-muted">Posted on: <%= post.createdAt.toDateString() %></small></p>
+                        <!-- Form to submit a new comment -->
+                        <form action="/event-planning/<%= post._id %>/comments" method="post" class="mb-3">
+                            <div class="form-group">
+                                <label for="commentContent">Your Comment:</label>
+                                <textarea class="form-control" id="commentContent" name="content" rows="2" required></textarea>
+                            </div>
+                            <input type="hidden" id="username" name="username" value="<%=displayName%>">
+                            <button type="submit" class="btn btn-primary">Comment</button>
+                        </form>
+                        <!-- Display existing comments for this post -->
+                        <% post.comments.forEach(comment => { %>
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h6 class="card-subtitle mb-2 text-muted"><strong><%= comment.username %></strong> commented:</h6>
+                                    <p class="card-text"><%= comment.content %></p>
+                                    <% if(displayName == comment.username) { %>
+                                    <a href="/delete/<%=post._id%>/<%=comment._id%>" class="btn btn-danger btn-sm delete"><i class="fas fa-trash-alt fa-sm"></i></a>
+                                    <% } %>
+                                    <p class="card-text"><small class="text-muted">Commented on: <%= comment.createdAt.toDateString() %></small></p>
+                                </div>
+                            </div>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% }) %>
+</div>

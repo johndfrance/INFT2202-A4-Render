@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="content/app.css">
+
+    <script src="scripts/namespace.js"></script>
+    <script src="scripts/router.js"></script>
+    <script src="scripts/contact.js"></script>
+    <script src="scripts/user.js"></script>
+    <script src="scripts/api.js"></script>
+    <script src="scripts/blogpost.js"></script>
+    <script src="scripts/event.js"></script>
+    <script src="scripts/services.js"></script>
+    <script src="scripts/team.js"></script>
+    <script src="scripts/contact.js"></script>
+<!--
+    <script src="scripts/event-planning.js"></script>
+    -->
+
+
+</head>
+<body id="<%=page%>">
+
+<header>
+    <%- include('./components/header') -%>
+</header>
+
+<main class ="container">
+    <%- include('./content/' + page) -%>
+</main>
+
+<footer>
+    <%- include('./components/footer') -%>
+</footer>
+<script src="bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="jquery/dist/jquery.min.js"></script>
+
+<script src="scripts/app.js"></script>
+<script src="scripts/stats.js"></script>
+
+</body>
+</html>
