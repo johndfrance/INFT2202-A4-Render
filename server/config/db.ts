@@ -1,4 +1,4 @@
-let LOCAL = true;
+let LOCAL = false;
 let HostName, URI;
 if(LOCAL){
     URI = "mongodb://localhost/contacts";

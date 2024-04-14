@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SessionSecret = exports.HostName = exports.URI = void 0;
-let LOCAL = true;
+let LOCAL = false;
 let HostName, URI;
 if (LOCAL) {
     exports.URI = URI = "mongodb://localhost/contacts";
